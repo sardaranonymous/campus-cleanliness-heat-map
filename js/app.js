@@ -1,3 +1,39 @@
+// Complaint form
+
+const complaintForm = document.getElementById("complaintForm");
+
+if (complaintForm) {
+
+    complaintForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const location =
+            document.getElementById("location").value;
+
+        const problemType =
+            document.getElementById("problemType").value;
+
+        const description =
+            document.getElementById("description").value;
+
+
+        console.log("New Complaint:");
+
+        console.log("Location:", location);
+        console.log("Problem:", problemType);
+        console.log("Description:", description);
+
+
+        document.getElementById("successMessage").style.display =
+            "block";
+
+
+        complaintForm.reset();
+
+    });
+
+}
 // Temporary dashboard data
 // Later these values will come from the database.
 
