@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Problem | CampusClean</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🏫 CampusClean
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="report.html" class="active">Report Problem</a>
+            <a href="heatmap.html">Heat Map</a>
+            <a href="trends.html">Trends</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Main -->
+    <main class="form-container">
+
+        <div class="form-header">
+
+            <p class="small-title">CLEANLINESS REPORT</p>
+
+            <h1>Report a Problem</h1>
+
+            <p>
+                Help improve your campus by reporting cleanliness
+                problems that need attention.
+            </p>
+
+        </div>
+
+
+        <form id="complaintForm" class="complaint-form">
+
+            <!-- Location -->
+            <div class="form-group">
+
+                <label for="location">
+                    Campus Location
+                </label>
+
+                <select id="location" required>
+
+                    <option value="">
+                        Select a location
+                    </option>
+
+                    <option value="Cafeteria">
+                        Cafeteria
+                    </option>
+
+                    <option value="Block A">
+                        Block A
+                    </option>
+
+                    <option value="Library">
+                        Library
+                    </option>
+
+                    <option value="Laboratory">
+                        Laboratory
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Problem -->
+            <div class="form-group">
+
+                <label for="problemType">
+                    Problem Type
+                </label>
+
+                <select id="problemType" required>
+
+                    <option value="">
+                        Select problem type
+                    </option>
+
+                    <option value="Overflowing Bin">
+                        Overflowing Bin
+                    </option>
+
+                    <option value="Litter">
+                        Litter / Garbage
+                    </option>
+
+                    <option value="Dirty Floor">
+                        Dirty Floor
+                    </option>
+
+                    <option value="Bad Odor">
+                        Bad Odor
+                    </option>
+
+                    <option value="Dirty Washroom">
+                        Dirty Washroom
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Description -->
+            <div class="form-group">
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    rows="5"
+                    placeholder="Describe the cleanliness problem..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <!-- Submit -->
+            <button type="submit" class="primary-button submit-button">
+                Submit Report
+            </button>
+
+
+            <!-- Success message -->
+            <div id="successMessage" class="success-message">
+
+                ✅ Your cleanliness report has been submitted successfully.
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 CampusClean — Campus Cleanliness Monitoring System
+        </p>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
