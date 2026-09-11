@@ -4,72 +4,218 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Campus Cleanliness Heat Map</title>
+    <title>Campus Cleanliness | Dashboard</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Campus Cleanliness Heat Map</h1>
-        <p>Monitor and improve cleanliness across campus</p>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            🏫 CampusClean
+        </div>
 
-    <main>
+        <div class="nav-links">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="report.html">Report Problem</a>
+            <a href="heatmap.html">Heat Map</a>
+            <a href="trends.html">Trends</a>
+        </div>
+    </nav>
 
-        <section>
-            <h2>Campus Overview</h2>
 
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Welcome -->
+        <section class="welcome">
             <div>
-                <h3>Total Complaints</h3>
-                <p id="totalComplaints">0</p>
+                <p class="small-title">CAMPUS CLEANLINESS MONITOR</p>
+
+                <h1>Campus Cleanliness Dashboard</h1>
+
+                <p>
+                    Monitor cleanliness problems and identify
+                    areas that need attention.
+                </p>
             </div>
 
-            <div>
-                <h3>High Problem Areas</h3>
-                <p id="highAreas">0</p>
-            </div>
-
-            <div>
-                <h3>Resolved Complaints</h3>
-                <p id="resolvedComplaints">0</p>
-            </div>
+            <a href="report.html" class="primary-button">
+                + Report a Problem
+            </a>
         </section>
 
-        <section>
-            <h2>Campus Areas</h2>
 
-            <div>
-                <h3>🔴 Cafeteria</h3>
-                <p>High number of cleanliness complaints</p>
+        <!-- Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">📋</div>
+
+                <div>
+                    <p>Total Complaints</p>
+                    <h2 id="totalComplaints">0</h2>
+                </div>
             </div>
 
-            <div>
-                <h3>🟠 Block A</h3>
-                <p>Moderate number of complaints</p>
+
+            <div class="stat-card">
+                <div class="stat-icon red">🔴</div>
+
+                <div>
+                    <p>High Problem Areas</p>
+                    <h2 id="highAreas">0</h2>
+                </div>
             </div>
 
-            <div>
-                <h3>🟢 Library</h3>
-                <p>Low number of complaints</p>
+
+            <div class="stat-card">
+                <div class="stat-icon green">✓</div>
+
+                <div>
+                    <p>Resolved Complaints</p>
+                    <h2 id="resolvedComplaints">0</h2>
+                </div>
             </div>
 
-            <div>
-                <h3>🟠 Lab</h3>
-                <p>Moderate number of complaints</p>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">📈</div>
+
+                <div>
+                    <p>This Week</p>
+                    <h2 id="weeklyComplaints">0</h2>
+                </div>
             </div>
+
         </section>
 
-        <section>
-            <h2>Quick Actions</h2>
 
-            <a href="report.html">Report a Problem</a>
-            <a href="heatmap.html">View Heat Map</a>
-            <a href="trends.html">View Trends</a>
+        <!-- Heat Map -->
+        <section class="section">
+
+            <div class="section-header">
+                <div>
+                    <p class="small-title">CAMPUS OVERVIEW</p>
+                    <h2>Cleanliness Heat Map</h2>
+                </div>
+
+                <a href="heatmap.html">View Full Map →</a>
+            </div>
+
+
+            <div class="campus-map">
+
+                <div class="campus-area high">
+                    <span class="area-status">HIGH</span>
+                    <div class="area-icon">🍽️</div>
+                    <h3>Cafeteria</h3>
+                    <p>18 complaints</p>
+                </div>
+
+
+                <div class="campus-area medium">
+                    <span class="area-status">MEDIUM</span>
+                    <div class="area-icon">🏢</div>
+                    <h3>Block A</h3>
+                    <p>9 complaints</p>
+                </div>
+
+
+                <div class="campus-area low">
+                    <span class="area-status">LOW</span>
+                    <div class="area-icon">📚</div>
+                    <h3>Library</h3>
+                    <p>2 complaints</p>
+                </div>
+
+
+                <div class="campus-area medium">
+                    <span class="area-status">MEDIUM</span>
+                    <div class="area-icon">🔬</div>
+                    <h3>Laboratory</h3>
+                    <p>7 complaints</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Bottom Grid -->
+        <section class="bottom-grid">
+
+            <!-- Trend -->
+            <div class="panel">
+
+                <div class="section-header">
+                    <div>
+                        <p class="small-title">THIS WEEK</p>
+                        <h2>Complaint Trend</h2>
+                    </div>
+
+                    <a href="trends.html">View Trends →</a>
+                </div>
+
+                <div class="trend-message">
+                    <span>📈</span>
+
+                    <div>
+                        <strong>Cafeteria complaints increased by 40%</strong>
+
+                        <p>
+                            Compared with last week.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Problem Areas -->
+            <div class="panel">
+
+                <div class="section-header">
+                    <div>
+                        <p class="small-title">ATTENTION REQUIRED</p>
+                        <h2>Top Problem Areas</h2>
+                    </div>
+                </div>
+
+
+                <div class="problem-row">
+                    <span>🔴</span>
+                    <strong>Cafeteria</strong>
+                    <span class="complaint-number">18</span>
+                </div>
+
+
+                <div class="problem-row">
+                    <span>🟠</span>
+                    <strong>Block A</strong>
+                    <span class="complaint-number">9</span>
+                </div>
+
+
+                <div class="problem-row">
+                    <span>🟠</span>
+                    <strong>Laboratory</strong>
+                    <span class="complaint-number">7</span>
+                </div>
+
+            </div>
+
         </section>
 
     </main>
+
+
+    <footer>
+        <p>© 2026 CampusClean — Campus Cleanliness Monitoring System</p>
+    </footer>
+
 
     <script src="js/app.js"></script>
 
