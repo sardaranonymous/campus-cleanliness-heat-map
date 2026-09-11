@@ -1,1 +1,1 @@
-console.log("Campus Cleanliness Heat Map");
+console.log("Campus Cleanliness Heat Map loaded successfully.");
